@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>front page</title>
+    <link rel="stylesheet" href="frntpage.css">
+
+</head>
+<body>
+
+   <br>
+    <div class="container">
+        <img src="ai.webp" alt="Snow">
+        <button class="btn" onclick="myFunction()"></button>
+        <input class = "btn" type="submit" value=" " onClick="myFunction()" />
+        <div id = "blink" class="popup" onclick="myFunction1()" text-align="centre;" >Hint!
+            <span class="popuptext" id="myPopup">follow the fingers of the bot</span>
+          </div>
+        
+        <script>
+          function myFunction() {
+            //window.location.href = "http://localhost:5175/";
+            let text;
+  let person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+          
+          // When the user clicks on div, open the popup
+          function myFunction1() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+          }
+          var blink = 
+            document.getElementById('blink');
+  
+        setInterval(function () {
+            blink.style.opacity = 
+            (blink.style.opacity == 0 ? 1 : 0);
+        }, 800);
+        
+        </script>
+      </div>
+      <div class="writeup">
+      <h1>Hello All </h1>
+      <h3>Task 1: integrating ChatGPT with a Web App</h3>
+      <br>
+      <p>Scroll over the image to find the designated point for initiating ChatGPT</p>
+    </div>
+      <br>
+      <br>
+ 
+</body>
+
+</html>
